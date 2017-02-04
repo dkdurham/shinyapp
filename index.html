@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kmeans Auto Data for Shinyapps.io</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Kmeans Auto Data for Shinyapps.io">
+  <meta name="author" content="Denver Durham">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Kmeans Auto Data for Shinyapps.io</h1>
+    <h2>Demo of shiny app for auto MPG data from UC Irvine</h2>
+    <p>Denver Durham<br/>R analyst</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Shiny App demonstration</h2>
+  </hgroup>
+  <article data-timings="">
+    <blockquote>
+<p>This app utilizes auto mpg data from UC Irvine, available at <a href="https://archive.ics.uci.edu/ml/datasets/Auto+MPG">https://archive.ics.uci.edu/ml/datasets/Auto+MPG</a></p>
+
+<p>The original dataset has been clenaed for missing values, but in all other respects is unaltered</p>
+
+<p>Using Shiny, we can observer trends and relationships between the variables. In this app, we can calculate the kmeans for clusters in the data, varying from 1-9.</p>
+</blockquote>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Auto Dataset</h2>
+  </hgroup>
+  <article data-timings="">
+    <blockquote>
+<p>Below is an example of the dataset in use.</p>
+</blockquote>
+
+<pre><code>##   X mpg cylinders displacement horsepower weight acceleration model.year
+## 1 1  18         8          307      130.0   3504         12.0         70
+## 2 2  15         8          350      165.0   3693         11.5         70
+## 3 3  18         8          318      150.0   3436         11.0         70
+## 4 4  16         8          304      150.0   3433         12.0         70
+## 5 5  17         8          302      140.0   3449         10.5         70
+## 6 6  15         8          429      198.0   4341         10.0         70
+##   origin                  car.name
+## 1      1 chevrolet chevelle malibu
+## 2      1         buick skylark 320
+## 3      1        plymouth satellite
+## 4      1             amc rebel sst
+## 5      1               ford torino
+## 6      1          ford galaxie 500
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>K Means calculation</h2>
+  </hgroup>
+  <article data-timings="">
+    <blockquote>
+<p>k-means clustering aims to partition our observations into a defined number of clusters, in which each observation belongs to the cluster with the nearest mean.</p>
+
+<p>The center-point of the cluster then represents the mean of that partition.</p>
+</blockquote>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Example Plot</h2>
+  </hgroup>
+  <article data-timings="">
+    <blockquote>
+<p>A simple plot ilustrates the relationship between mpg and vehicle weight, however this does not lend itself to the type of analysis where we could group the data into categories.</p>
+</blockquote>
+
+<p><img src="figure/plot-1.png" alt="plot of chunk plot"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>K means Plot</h2>
+  </hgroup>
+  <article data-timings="">
+    <blockquote>
+<p>On the other hand, a kmeans plot of the data can allow us to visualize where breaks in the samples occur.</p>
+
+<p>Additionally, our shiny app can allow comparison of any two variables in the data set, and visualization of a number of different k-means buckets or partitions.</p>
+</blockquote>
+
+<p><img src="screengrab.jpg" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" width="700px" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Shiny App demonstration'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Auto Dataset'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='K Means calculation'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Example Plot'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='K means Plot'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
