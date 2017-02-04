@@ -1,3 +1,3 @@
 # shinyapp
 
-## The Slidify demo is ShinyApp.html
+## The Slidify demo is index.html
